@@ -1,9 +1,20 @@
 const imageContainer = document.querySelector(".image-container");
+const imageFolder = "images/"; // Cambia esto al nombre de tu carpeta de imágenes
 
-// Aquí vamos a añadir el código para cargar las imágenes de la carpeta
-// y crear los elementos de imagen.
+// Obtener las imágenes de la carpeta
+const imageFiles = [
+    "platypus.jpg",
+    "dodo.jpg",
+    "otter.jpg",
+    "llama.jpg",
+    "echidna.jpg",
+    "capybara.jpg"
+];
 
-// Ejemplo:
-// imageContainer.innerHTML += `<div class="image-item"><img src="path/to/image.jpg" alt="Animal"></div>`; 
-
-// Y después, el código para añadir el evento de clic para redirigir a la página del animal.
+// Crear elementos de imagen para cada imagen
+imageFile.forEach(file => {
+    const imageItem = document.createElement("div");
+    imageItem.classList.add("image-item");
+    imageItem.innerHTML = `<img src="${imageFolder}${file}" alt="${file}">`;
+    imageContainer.appendChild(imageItem);
+});
